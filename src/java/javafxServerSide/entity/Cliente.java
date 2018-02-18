@@ -8,6 +8,7 @@ package javafxServerSide.entity;
 import java.io.Serializable;
 import java.math.BigInteger;
 import java.util.Collection;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.MapsId;
@@ -65,7 +66,7 @@ public class Cliente implements Serializable {
     private BigInteger telefono;
     private String email;
     private String web;
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     private PersonaDeContacto contacto;
     @OneToMany(mappedBy="cliente")
     private Collection<Factura> facturas;

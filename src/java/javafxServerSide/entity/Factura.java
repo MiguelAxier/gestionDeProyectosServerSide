@@ -12,12 +12,14 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+import javax.persistence.Table;
 
 /**
  *
  * @author ubuntu
  */
 @Entity
+@Table(name="factura", schema="dindb")
 public class Factura implements Serializable {
 
     private static final long serialVersionUID = 1L;
